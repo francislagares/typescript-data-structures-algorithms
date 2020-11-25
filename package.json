@@ -9,7 +9,8 @@
   "scripts": {
     "build": "tsc --watch",
     "start": "nodemon dist/index.js",
-    "dev": "concurrently \"yarn:build\" \"yarn:start\""
+    "dev": "concurrently \"yarn:build\" \"yarn:start\"",
+    "test": "jest --watchAll --no-cache"
   },
   "husky": {
     "hooks": {

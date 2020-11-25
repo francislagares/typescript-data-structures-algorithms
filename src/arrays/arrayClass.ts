@@ -1,8 +1,8 @@
-class myArray<T> {
+export class myArray<T> {
   private length: number;
   private data: {};
 
-  public constructor(args?: T[]) {
+  public constructor(...args: T[]) {
     this.length = args.length;
     this.data = {};
     for (const key in args) {
@@ -18,7 +18,7 @@ class myArray<T> {
     return this.length === 0;
   }
 
-  public get(index: number): number {
+  public get(index: number): T {
     return this.data[index];
   }
 
