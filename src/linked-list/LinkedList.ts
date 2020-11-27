@@ -7,18 +7,18 @@ export class Node<T> implements INode<T> {
   public data: T;
   public next?: INode<T>;
 
-  constructor(data: T) {
+  constructor(data?: T) {
     this.data = data;
     this.next = null;
   }
 }
 
 export class LinkedList<T> {
-  private head: INode<T> | null;
-  protected tail: INode<T> | null;
+  public head: INode<T> | null;
+  public tail: INode<T> | null;
   protected length: number;
 
-  constructor(data: T) {
+  constructor(data?: T) {
     this.head = new Node(data);
     this.tail = this.head;
     this.length = 1;
