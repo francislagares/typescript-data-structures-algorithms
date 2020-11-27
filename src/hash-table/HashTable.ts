@@ -1,8 +1,8 @@
 export class HashTable {
-  protected size: number;
-  private data;
+  public size: number;
+  public data;
 
-  constructor(size: number) {
+  constructor(size?: number) {
     this.size = size;
     this.data = new Array(size);
   }
@@ -37,8 +37,8 @@ export class HashTable {
     return undefined;
   }
 
-  public keys() {
-    const keysArray = [];
+  public keys(): string[] {
+    const keysArray: string[] = [];
     for (let i = 0; i < this.data.length; i++) {
       if (this.data[i]) {
         keysArray.push(this.data[i][0][0]);
