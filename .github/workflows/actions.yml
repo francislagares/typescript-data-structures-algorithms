@@ -2,11 +2,10 @@ name: TypeScript Compile and Test CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -14,17 +13,25 @@ jobs:
         node-version: [14.x]
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: Install Yarn
-      run: npm install -g yarn
-    - name: Install Dependencies
-      run: yarn install --frozen-lockfile
-    - name: Compile TypeScript
-      run: yarn build-ts
-    - name: Run Tests
-      run: yarn test
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Cache node_modules directory
+      - uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install Dependencies
+        run: yarn install
+
+      - name: Compile TypeScript
+        run: yarn build-ts
+
+      - name: Run Tests
+        run: yarn test
