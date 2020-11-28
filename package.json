@@ -12,7 +12,7 @@
     "start": "nodemon dist/index.js",
     "dev": "concurrently \"yarn:build-dev\" \"yarn:start\"",
     "test-dev": "jest --watchAll --no-cache",
-    "test": "jest"
+    "test": "jest --verbose"
   },
   "husky": {
     "hooks": {
