@@ -7,10 +7,12 @@
   "author": "Francis Lagares",
   "license": "MIT",
   "scripts": {
-    "build": "tsc --watch",
+    "build-ts": "tsc",
+    "build-dev": "tsc --watch",
     "start": "nodemon dist/index.js",
-    "dev": "concurrently \"yarn:build\" \"yarn:start\"",
-    "test": "jest --watchAll --no-cache"
+    "dev": "concurrently \"yarn:build-dev\" \"yarn:start\"",
+    "test-dev": "jest --watchAll --no-cache",
+    "test": "jest"
   },
   "husky": {
     "hooks": {
