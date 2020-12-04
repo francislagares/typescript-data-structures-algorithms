@@ -42,4 +42,23 @@ describe('Binary Search Tree', () => {
     expect(bst.lookup(6).value).toBe(6);
     expect(bst.lookup(45)).toBeFalsy();
   });
+
+  test.only('remove nodes from tree', () => {
+    const bst = new BinarySearchTree<number>();
+
+    bst.insert(9);
+    bst.insert(4);
+    bst.insert(6);
+    bst.insert(20);
+    bst.insert(170);
+    bst.insert(15);
+    bst.insert(1);
+
+    expect(bst.remove(9)).toBeTruthy();
+    expect(bst.remove(4)).toBeTruthy();
+    expect(bst.remove(170)).toBeTruthy();
+    expect(bst.remove(53)).toBeFalsy();
+    expect(bst.remove(678)).toBeFalsy();
+    expect(bst.remove(138)).toBeFalsy();
+  });
 });
