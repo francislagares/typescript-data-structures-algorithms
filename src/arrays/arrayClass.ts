@@ -1,6 +1,6 @@
 export class myArray<T> {
   private length: number;
-  private data: {};
+  private data: Record<string, T>;
 
   public constructor(...args: T[]) {
     this.length = args.length;

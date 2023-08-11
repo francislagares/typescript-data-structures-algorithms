@@ -1,2 +1,13 @@
-dist/
+# yarn cache
+.yarn/*
+.yarn/cache
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+
+coverage/
 node_modules/
+dist/

@@ -1,3 +1,5 @@
+import { describe, expect, test } from 'vitest';
+
 import { myArray } from '../arrayClass';
 
 describe('Array Class Implementation', () => {
@@ -14,7 +16,7 @@ describe('Array Class Implementation', () => {
   test('get value from a given index in array', () => {
     const array = new myArray(
       { id: 1, name: 'Francis' },
-      { id: 2, name: 'Carole' }
+      { id: 2, name: 'Carole' },
     );
     expect(array.get(1)).toEqual({ id: 2, name: 'Carole' });
   });
@@ -29,7 +31,7 @@ describe('Array Class Implementation', () => {
     const array = new myArray(
       ['name', 'Francis'],
       ['name', 'Erika'],
-      ['name', 'Peter']
+      ['name', 'Peter'],
     );
     expect(array.pop()).toEqual(['name', 'Peter']);
   });
@@ -39,7 +41,7 @@ describe('Array Class Implementation', () => {
       { id: 1, name: 'Francis' },
       { id: 2, name: 'Carole' },
       { id: 3, name: 'Peter' },
-      { id: 4, name: 'Erika' }
+      { id: 4, name: 'Erika' },
     );
     expect(array.delete(2)).toEqual({ id: 3, name: 'Peter' });
   });

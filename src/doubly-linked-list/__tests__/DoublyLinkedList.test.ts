@@ -1,3 +1,5 @@
+import { describe, expect, test } from 'vitest';
+
 import { DoublyLinkedList } from '../DoublyLinkedList';
 
 describe('Doubly Linked List', () => {

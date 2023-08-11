@@ -1,3 +1,5 @@
+import { describe, expect, test } from 'vitest';
+
 import { HashTable } from '../HashTable';
 
 describe('Hash Table Class Implementation', () => {

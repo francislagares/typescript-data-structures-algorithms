@@ -1,3 +1,5 @@
+import { describe, expect, test } from 'vitest';
+
 import { Queue } from '../QueueClass';
 
 describe('Queue', () => {

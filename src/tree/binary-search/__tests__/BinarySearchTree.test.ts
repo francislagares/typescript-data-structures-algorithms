@@ -43,7 +43,7 @@ describe('Binary Search Tree', () => {
     expect(bst.lookup(45)).toBeFalsy();
   });
 
-  test.only('remove nodes from tree', () => {
+  test('remove nodes from tree', () => {
     const bst = new BinarySearchTree<number>();
 
     bst.insert(9);

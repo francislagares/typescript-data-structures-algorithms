@@ -27,7 +27,7 @@ export default class Graph<T> implements Graph<T> {
   public addEdge(vertex: string, node: string): boolean {
     // If vertex1 exists in adjacentList add vertex2 to the adjacents
     // If vertex2 exists in adjacentList add vertex1 to the adjacents
-    let hasEdge = this.hasEdge(vertex, node);
+    const hasEdge = this.hasEdge(vertex, node);
     if (!hasEdge) {
       this.adjacentList[vertex].push(node);
       this.adjacentList[node].push(vertex);
@@ -38,7 +38,7 @@ export default class Graph<T> implements Graph<T> {
   }
 
   public hasEdge(vertex: string, node: string): boolean {
-    let adjacents = this.adjacentList[vertex];
+    const adjacents = this.adjacentList[vertex];
     for (let i = 0; i < adjacents.length; i++) {
       if (node === adjacents[i]) return true;
     }
@@ -47,8 +47,8 @@ export default class Graph<T> implements Graph<T> {
 
   public displayConnections(): void {
     const allNodes = Object.keys(this.adjacentList);
-    for (let node of allNodes) {
-      let nodeConnections = this.adjacentList[node];
+    for (const node of allNodes) {
+      const nodeConnections = this.adjacentList[node];
       let connections = '';
       let vertex: string;
       for (vertex of nodeConnections) {

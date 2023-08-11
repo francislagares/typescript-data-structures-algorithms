@@ -15,8 +15,8 @@ export class HashTable {
     return hash;
   }
 
-  public set(key: string, value: any) {
-    let address = this.hash(key);
+  public set(key: string, value: unknown) {
+    const address = this.hash(key);
     if (!this.data[address]) {
       this.data[address] = [];
     }
@@ -25,7 +25,7 @@ export class HashTable {
   }
 
   public get(key: string) {
-    let address = this.hash(key);
+    const address = this.hash(key);
     const currentBucket = this.data[address];
     if (currentBucket) {
       for (let i = 0; i < currentBucket.length; i++) {
