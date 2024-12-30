@@ -1,5 +1,3 @@
-import { describe, test } from 'vitest';
-
 import { isValidParentheses } from '../parentheses';
 
 describe('Parentheses', () => {

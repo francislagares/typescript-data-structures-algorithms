@@ -1,4 +1,3 @@
-import { describe, test } from 'vitest';
 import { chunkArray, chunkSliced } from '../array-chunk';
 
 describe('Array chunk', () => {

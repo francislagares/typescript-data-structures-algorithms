@@ -1,5 +1,3 @@
-import { describe, test } from 'vitest';
-
 import { findMaxChar } from '../maxchar';
 
 describe('Maxchar Algorithm', () => {

@@ -1,8 +1,7 @@
-import { SpyInstance, describe, test, vi } from 'vitest';
 import { pyramid, pyramidWithRecursion } from '../pyramid';
 
 describe('Steps Algorithm', () => {
-  let spy: SpyInstance;
+  let spy;
 
   beforeEach(() => {
     spy = vi.spyOn(console, 'log').mockImplementation(() => {});

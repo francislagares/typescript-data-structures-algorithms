@@ -1,5 +1,3 @@
-import { describe, test } from 'vitest';
-
 import { reverseInt } from '../integer-reversal';
 
 describe('Integer Reversal', () => {

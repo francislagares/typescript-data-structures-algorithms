@@ -1,9 +1,7 @@
-import { SpyInstance, describe, test, vi } from 'vitest';
-
 import { fizzBuzz } from '../fizzbuzz';
 
 describe('Fizzbuzz Algorithm', () => {
-  let spy: SpyInstance;
+  let spy;
 
   beforeEach(() => {
     spy = vi.spyOn(console, 'log').mockImplementation(() => {});

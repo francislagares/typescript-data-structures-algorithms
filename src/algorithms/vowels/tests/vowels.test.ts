@@ -1,4 +1,3 @@
-import { describe, test } from 'vitest';
 import { vowels, vowelsWithRegex } from '../vowels';
 
 describe('Finding Vowels', () => {

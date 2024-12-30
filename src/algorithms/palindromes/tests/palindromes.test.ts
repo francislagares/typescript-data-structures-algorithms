@@ -1,4 +1,3 @@
-import { describe, test } from 'vitest';
 import { palindrome, palindromeWithEvery } from '../palindromes';
 
 describe('Palindromes', () => {

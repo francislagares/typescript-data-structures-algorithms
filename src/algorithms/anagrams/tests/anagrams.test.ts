@@ -1,5 +1,4 @@
 import { anagrams, easyAnagram } from '../anagrams';
-import { describe, test } from 'vitest';
 
 describe('Anagrams Algorithm', () => {
   test('anagrams function exists', () => {

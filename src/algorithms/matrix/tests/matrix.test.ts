@@ -1,5 +1,3 @@
-import { describe, test } from 'vitest';
-
 import { matrix } from '../matrix';
 
 describe('Matrix Spiral', () => {
