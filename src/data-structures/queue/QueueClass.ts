@@ -1,6 +1,6 @@
 import { QueueNode } from './QueueNode';
 
-export interface Queue<T> {
+export interface IQueue<T> {
   size: number;
   first: QueueNode<T> | null;
   last: QueueNode<T> | null;
@@ -10,7 +10,11 @@ export interface Queue<T> {
   isEmpty(): boolean;
 }
 
-export class Queue<T> implements Queue<T> {
+export class Queue<T> implements IQueue<T> {
+  public first: QueueNode<T> | null;
+  public last: QueueNode<T> | null;
+  public size: number;
+
   constructor() {
     this.first = null;
     this.last = null;

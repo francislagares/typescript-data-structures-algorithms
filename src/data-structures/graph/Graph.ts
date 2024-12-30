@@ -7,7 +7,7 @@ export default interface Graph<T> {
   displayConnections(): void;
 }
 
-export default class Graph<T> implements Graph<T> {
+export default class GraphImpl<T> implements Graph<T> {
   public constructor() {
     this.numberOfNodes = 0;
     this.adjacentList = {};

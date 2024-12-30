@@ -1,13 +1,15 @@
 import { TreeNode } from '../TreeNode';
 
-export interface BinarySearchTree<T> {
+export interface IBinarySearchTree<T> {
   root: TreeNode<T> | null;
   insert(value: T): TreeNode<T> | null;
   lookup(value: T): TreeNode<T> | null;
   remove(value: T): boolean;
 }
 
-export class BinarySearchTree<T> implements BinarySearchTree<T> {
+export class BinarySearchTree<T> implements IBinarySearchTree<T> {
+  public root: TreeNode<T> | null;
+
   public constructor() {
     this.root = null;
   }

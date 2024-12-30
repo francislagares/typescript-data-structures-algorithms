@@ -1,6 +1,6 @@
 import { StackNode } from './StackNode';
 
-export interface Stack<T> {
+export interface IStack<T> {
   size: number;
   top: StackNode<T> | null;
   bottom: StackNode<T> | null;
@@ -9,7 +9,11 @@ export interface Stack<T> {
   peek(): StackNode<T> | null;
 }
 
-export class Stack<T> implements Stack<T> {
+export class Stack<T> implements IStack<T> {
+  public size: number;
+  public top: StackNode<T> | null;
+  public bottom: StackNode<T> | null;
+
   public constructor() {
     this.size = 0;
     this.top = null;
