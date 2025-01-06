@@ -5,13 +5,44 @@
       "type": "node",
       "request": "launch",
       "name": "Vitest Current File",
-      "program": "${workspaceFolder}/node_modules/.bin/vitest",
-      "args": ["${fileBasenameNoExtension}", "--config", "vite.config.ts"],
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": [
+        "exec",
+        "vitest",
+        "${fileBasenameNoExtension}",
+        "--config",
+        "vite.config.mts"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug TypeScript Current File",
+      "runtimeArgs": ["-r", "tsx"],
+      "args": ["${relativeFile}"],
+      "cwd": "${workspaceRoot}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug TypeScript with pnpm",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["run", "debug"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "windows": {
-        "program": "${workspaceFolder}/node_modules/jest/bin/jest"
-      }
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach to Process",
+      "port": 9229,
+      "restart": true,
+      "skipFiles": ["<node_internals>/**"]
     }
   ]
 }
